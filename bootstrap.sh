@@ -20,7 +20,7 @@ function msg_success {
 
 # Display success message on the prompt
 function msg_info {
-    echo  "\033[00;34m☞ $1 \033[0m";
+    echo  "\033[00;34m➔ $1 \033[0m";
 }
 
 function link_files {
