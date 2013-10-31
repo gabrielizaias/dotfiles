@@ -9,17 +9,17 @@ function msg {
 }
 
 # Display an error message on the prompt
-function error {
+function msg_error {
     echo "\033[1;31m✖ Error: $1\033[0m";
 }
 
 # Display success message on the prompt
-function success {
+function msg_success {
     echo  "\033[1;32m✔ $1 \033[0m";
 }
 
 # Display success message on the prompt
-function info {
+function msg_info {
     echo  "\033[00;34m☞ $1 \033[0m";
 }
 
