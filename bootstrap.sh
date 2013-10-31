@@ -22,3 +22,8 @@ function success {
 function info {
     echo  "\033[00;34m☞ $1 \033[0m";
 }
+
+function link_files {
+    ln -s $1 $2
+    success "Linked $1 to $2"
+}
