@@ -14,6 +14,8 @@ else
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 fi
 
+# Find the installers and run them iteratively
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 
 function link_files {
