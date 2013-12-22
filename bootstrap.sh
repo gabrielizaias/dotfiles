@@ -76,3 +76,5 @@ function symlink_dotfiles {
 }
 
 symlink_dotfiles
+
+msg "Done"
