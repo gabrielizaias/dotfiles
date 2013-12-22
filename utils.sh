@@ -2,7 +2,7 @@
 
 # Display a message on the prompt
 function msg {
-    printf "\r\033[0;37m  $1 \033[0m\n"
+    printf "\r\033[0;37m    $1 \033[0m\n"
 }
 
 # Display an error message on the prompt
