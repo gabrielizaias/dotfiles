@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Exit script if an error occurs
-set -e
+# set -e
 
 # Utility functions
 source utils.sh
@@ -11,11 +11,8 @@ if which brew &> /dev/null; then
     msg_success "Homebrew already installed"
 else
     msg_info "Installing Homebrew"
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
-
-# Find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 function symlink_dotfiles {
     msg_info 'Linking dotfiles'
@@ -77,4 +74,8 @@ function symlink_dotfiles {
 
 symlink_dotfiles
 
+# Find the installers and run them iteratively
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+
+# The end :)
 msg "Done"
