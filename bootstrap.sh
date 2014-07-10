@@ -14,6 +14,9 @@ else
     ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
 
+# Find the installers and run them iteratively
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+
 function symlink_dotfiles {
     msg_info 'Linking dotfiles'
 
@@ -73,9 +76,6 @@ function symlink_dotfiles {
 }
 
 symlink_dotfiles
-
-# Find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 # The end :)
 msg "Done"
