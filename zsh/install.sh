@@ -17,4 +17,3 @@ else
     msg_info "Making zsh the default shell"
     chsh -s /usr/local/bin/zsh $USER
 fi
-

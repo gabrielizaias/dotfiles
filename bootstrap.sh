@@ -77,5 +77,8 @@ function symlink_dotfiles {
 
 symlink_dotfiles
 
+# Load .zshrc
+. ~/.zshrc
+
 # The end :)
 msg "Done"
