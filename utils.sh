@@ -17,7 +17,7 @@ function msg_success {
 
 # Display an info message on the prompt
 function msg_info {
-    printf "\r\033[00;34m ➔  $1 \033[0m\n"
+    printf "\r\033[00;36m ➔  $1 \033[0m\n"
 }
 
 # Display a warning message on the prompt
