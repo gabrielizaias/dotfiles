@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Exit script if an error occurs
-# set -e
+set -e
 
 # Utility functions
 source utils.sh
