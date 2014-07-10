@@ -14,10 +14,6 @@ for file in ${config_files:#*/path.zsh}; do
     source $file
 done
 
-# Initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-
 unset config_files
 
 
