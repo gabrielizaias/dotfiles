@@ -1,2 +1,2 @@
 # Add .rvm/bin to PATH
-PATH=$PATH:$HOME/.rvm/bin
+PATH="/usr/local/bin:/usr/local/sbin:~/bin:~/.rvm/bin:~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH"
