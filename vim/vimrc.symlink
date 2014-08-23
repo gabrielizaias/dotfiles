@@ -23,6 +23,8 @@ nmap <leader>w :w!<cr>
 execute pathogen#infect()
 execute pathogen#helptags()
 
+"" Better nerdtoolbar shortcut$
+nnoremap <silent> <leader><tab> :NERDTreeToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
