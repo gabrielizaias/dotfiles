@@ -28,7 +28,7 @@
   # Show verbose output about tags, branches or remotes
   t = tag -l
   b = branch -a
-  remotes = remote -v
+  r = remote -v
   # Credit an author on the latest commit
   credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
   # Interactive rebase with the given number of latest commits
