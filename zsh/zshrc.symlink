@@ -25,8 +25,8 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Example aliases
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ht="cd /Applications/MAMP/htdocs"
 alias laravel="composer create-project laravel/laravel"
 
