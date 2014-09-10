@@ -6,5 +6,5 @@ function gitexport() {
 
 # generate .gitignore automatically using gitignore.io
 function gi() {
-  curl http://www.gitignore.io/api/"$@"
+  curl -s https://www.gitignore.io/api/"$@" ;
 }
