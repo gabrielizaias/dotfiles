@@ -70,6 +70,8 @@ alias arestart="sudo apachectl -k restart"
 # Start MAMP PRO
 alias mamp="open /Applications/MAMP\ PRO/MAMP\ PRO.app"
 
+# Map Vim to MacVim
+alias vim="mvim"
 
 # ##############################################################################
 #  Functions
