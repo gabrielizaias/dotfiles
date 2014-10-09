@@ -77,6 +77,20 @@ alias vim="mvim"
 #  Functions
 # ##############################################################################
 
+# Start MySQL and Apache (System's, not MAMP's)
+function server() {
+    if [ "$@" = "start" ]; then
+        sudo apachectl -k start
+        mysql.server start
+    elif [ "$@" = "stop" ]; then
+        sudo apachectl -k stop
+        mysql.server stop
+    elif [ "$@" = "restart" ]; then
+        sudo apachectl -k restart
+        mysql.server restart
+    fi
+}
+
 # Create a new directory and enter it
 function mkd() {
     mkdir -p "$@" && cd "$@"
