@@ -80,14 +80,44 @@ alias vim="mvim"
 # Start MySQL and Apache (System's, not MAMP's)
 function server() {
     if [ "$@" = "start" ]; then
-        sudo apachectl -k start
-        mysql.server start
+        sudo apachectl -k start &> /dev/null
+        if [ $? -eq 0 ]; then
+          echo "\r\033[00;32m ✔  Apache started successfully \033[0m"
+        else
+          echo "\r\033[1;31m ✖  Apache did not start successfully \033[0m"
+        fi
+        mysql.server start &> /dev/null
+        if [ $? -eq 0 ]; then
+          echo "\r\033[00;32m ✔  MySQL started successfully \033[0m"
+        else
+          echo "\r\033[1;31m ✖  MySQL did not start successfully \033[0m"
+        fi
     elif [ "$@" = "stop" ]; then
-        sudo apachectl -k stop
-        mysql.server stop
+        sudo apachectl -k stop &> /dev/null
+        if [ $? -eq 0 ]; then
+          echo "\r\033[00;32m ✔  Apache stopped successfully \033[0m"
+        else
+          echo "\r\033[1;31m ✖  Apache did not stop successfully \033[0m"
+        fi
+        mysql.server stop &> /dev/null
+        if [ $? -eq 0 ]; then
+          echo "\r\033[00;32m ✔  MySQL stopped successfully \033[0m"
+        else
+          echo "\r\033[1;31m ✖  MySQL did not stop successfully \033[0m"
+        fi
     elif [ "$@" = "restart" ]; then
-        sudo apachectl -k restart
-        mysql.server restart
+        sudo apachectl -k restart &> /dev/null
+        if [ $? -eq 0 ]; then
+          echo "\r\033[00;32m ✔  Apache restarted successfully \033[0m"
+        else
+          echo "\r\033[1;31m ✖  Apache did not restart successfully \033[0m"
+        fi
+        mysql.server restart &> /dev/null
+        if [ $? -eq 0 ]; then
+          echo "\r\033[00;32m ✔  MySQL restarted successfully \033[0m"
+        else
+          echo "\r\033[1;31m ✖  MySQL did not restart successfully \033[0m"
+        fi
     fi
 }
 
