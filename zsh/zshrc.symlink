@@ -28,6 +28,7 @@ alias .....="cd ../../../.."
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ht="cd /Applications/MAMP/htdocs"
+alias proj="cd ~/Projects"
 alias laravel="composer create-project laravel/laravel"
 
 # Empty the Trash on all mounted volumes and the main HDD
