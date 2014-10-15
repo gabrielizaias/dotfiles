@@ -24,11 +24,14 @@ unset config_files
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# File system navigation
 alias ht="cd /Applications/MAMP/htdocs"
 alias proj="cd ~/Projects"
+
+# Create new Laravel project
 alias laravel="composer create-project laravel/laravel"
 
 # Empty the Trash on all mounted volumes and the main HDD
