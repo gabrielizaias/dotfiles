@@ -1,4 +1,5 @@
 export DOTFILES=$HOME/.dotfiles
+export LANG=en_US.utf8
 
 # All of our zsh files
 typeset -U config_files
