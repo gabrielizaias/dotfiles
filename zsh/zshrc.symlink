@@ -30,6 +30,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # File system navigation
 alias ht="cd /Applications/MAMP/htdocs"
 alias proj="cd ~/Projects"
+alias www="cd /var/www"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
