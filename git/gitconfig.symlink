@@ -15,6 +15,8 @@
   c = clone --recursive
   # Commit all changes
   ca = !git add -A && git commit -av
+  # Commit all changes with -m
+  cam = !git add -A && git commit -av -m
   # commit -m shorhand, cuz I'm lazy
   cm = commit -m
   # Merge branches, keeping historical existence of the merged branch
