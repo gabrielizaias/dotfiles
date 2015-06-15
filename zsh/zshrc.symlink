@@ -28,7 +28,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # File system navigation
-alias www="cd ~/Sites/"
+alias www="cd /var/www"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
@@ -66,6 +66,31 @@ alias reload="exec $SHELL -l"
 alias astart="sudo apachectl -k start"
 alias astop="sudo apachectl -k stop"
 alias arestart="sudo apachectl -k restart"
+
+# Start, Stop and Restart nginx (Homebrew)
+alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias nginx.restart='nginx.stop && nginx.start'
+
+# Start, Stop and Restart php-fpm (Homebrew)
+alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
+alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
+alias php-fpm.restart='php-fpm.stop && php-fpm.start'
+
+# Start, Stop and Restart mysql (Homebrew)
+alias mysql.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias mysql.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias mysql.restart='mysql.stop && mysql.start'
+
+# Show nginx error logs (Homebrew)
+alias nginx.logs.error='tail -250f /usr/local/etc/nginx/logs/error.log'
+alias nginx.logs.access='tail -250f /usr/local/etc/nginx/logs/access.log'
+alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.access.log'
+alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
+
+alias dnsmasq.start='sudo launchctl start homebrew.mxcl.dnsmasq'
+alias dnsmasq.stop='sudo launchctl stop homebrew.mxcl.dnsmasq'
+alias dnsmasq.restart='dnsmasq.stop && dnsmasq.start'
 
 # Start MAMP PRO
 alias mamp="open /Applications/MAMP\ PRO/MAMP\ PRO.app"
