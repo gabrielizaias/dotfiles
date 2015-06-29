@@ -20,8 +20,8 @@ let g:mapleader = ","
 nmap <leader>w :w!<cr>
 
 " Plugins
-execute pathogen#infect()
-execute pathogen#helptags()
+"execute pathogen#infect()
+"execute pathogen#helptags()
 
 "" Better nerdtoolbar shortcut$
 nnoremap <silent> <leader><tab> :NERDTreeToggle<cr>
@@ -90,7 +90,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme solarized
+"colorscheme solarized
 set background=dark
 
 " Set extra options when running in GUI mode
