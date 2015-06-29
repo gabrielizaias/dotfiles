@@ -92,9 +92,6 @@ alias dnsmasq.start='sudo launchctl start homebrew.mxcl.dnsmasq'
 alias dnsmasq.stop='sudo launchctl stop homebrew.mxcl.dnsmasq'
 alias dnsmasq.restart='dnsmasq.stop && dnsmasq.start'
 
-# Start MAMP PRO
-alias mamp="open /Applications/MAMP\ PRO/MAMP\ PRO.app"
-
 # Map Vim to MacVim
 alias vim="mvim"
 
