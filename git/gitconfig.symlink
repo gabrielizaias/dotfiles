@@ -90,6 +90,7 @@
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
+  tool = p4merge
 
 # URL shorthands
 [url "git@github.com:"]
@@ -122,3 +123,6 @@
   clean = git lfs clean %f
   smudge = git lfs smudge %f
   required = true
+[mergetool]
+  keepTemporaries = false
+  prompt = false
