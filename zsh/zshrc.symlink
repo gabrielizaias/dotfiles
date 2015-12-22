@@ -23,6 +23,7 @@ unset config_files
 
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias tidyup="emptytrash; update;"
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
