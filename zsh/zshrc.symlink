@@ -24,6 +24,7 @@ unset config_files
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias tidyup="emptytrash; update;"
+alias cls="clear"
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
@@ -94,7 +95,7 @@ alias dnsmasq.stop='sudo launchctl stop homebrew.mxcl.dnsmasq'
 alias dnsmasq.restart='dnsmasq.stop && dnsmasq.start'
 
 # Map Vim to MacVim
-alias vim="mvim"
+# alias vim="mvim"
 
 # ##############################################################################
 #  Functions
