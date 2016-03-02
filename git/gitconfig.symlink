@@ -69,7 +69,7 @@
 [color]
   # Use colors in Git commands that are capable of colored output when
   # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-  ui = auto
+  ui = always
 
 [color "branch"]
   current = yellow reverse
@@ -81,6 +81,12 @@
   frag = magenta bold
   old = red bold
   new = green bold
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 
 [color "status"]
   added = yellow
