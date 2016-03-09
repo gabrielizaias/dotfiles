@@ -17,8 +17,10 @@
   ca = !git add -A && git commit -vS
   # Commit all changes with -m
   cam = !git add -A && git commit -vS -m
-  # commit -m shorhand, cuz I'm lazy
-  cm = commit -Sm
+  # Commit -m shorhand, cuz I'm lazy
+  cm = commit -S -m
+  # Force signed commit
+  commit = commit -S
   # Merge branches, keeping historical existence of the merged branch
   m = merge --no-ff
   # Merge branch and delete the merged branch
