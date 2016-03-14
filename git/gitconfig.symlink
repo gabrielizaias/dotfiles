@@ -12,7 +12,7 @@
   # Pull in remote changes for the current repository and all its submodules
   p = !"git pull; git fetch -p; git submodule foreach git pull origin master"
   # Locally ignore changes to file(s)
-  bp = update-index --assume-unchanged
+  bypass = update-index --assume-unchanged
   # Clone a repository including all submodules
   c = clone --recursive
   # Commit all changes
