@@ -127,7 +127,6 @@
 [user]
   name = Gabriel Izaias
   email = gabriel.izaias@gmail.com
-  signingkey = 7BEAFD0F
 
 [filter "media"]
   clean = git-media-clean %f
