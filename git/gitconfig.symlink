@@ -16,13 +16,11 @@
   # Clone a repository including all submodules
   c = clone --recursive
   # Commit all changes
-  ca = !git add -A && git commit -vS
+  ca = !git add -A && git commit -v
   # Commit all changes with -m
-  cam = !git add -A && git commit -vS -m
+  cam = !git add -A && git commit -v -m
   # Commit -m shorhand, cuz I'm lazy
-  cm = commit -S -m
-  # Force signed commit
-  commit = commit -S
+  cm = commit  -m
   # Merge branches, keeping historical existence of the merged branch
   m = merge --no-ff
   # Merge branch and delete the merged branch
@@ -127,7 +125,6 @@
 [user]
   name = Gabriel Izaias
   email = gabriel.izaias@gmail.com
-  signingkey = 7BEAFD0F
 
 [filter "media"]
   clean = git-media-clean %f
