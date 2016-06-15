@@ -136,3 +136,7 @@
 [mergetool]
   keepTemporaries = false
   prompt = false
+
+[diff]
+  # Enable improved diff algorithm (git 2.9)
+  compactionHeuristic = true
