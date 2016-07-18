@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Exit script if an error occurs
-set -e
+#set -e
 
 # Utility functions
 source utils.sh
@@ -65,12 +65,12 @@ function symlink_dotfiles {
       fi
 
       if ! $skip && ! $skip_all; then
-        link_files $source $dest
+        ln -Fs $source $dest
       else
         msg_success "Skipped $source"
       fi
     else
-      link_files $source $dest
+      ln -Fs $source $dest
     fi
   done
 }
