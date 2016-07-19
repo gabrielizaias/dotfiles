@@ -93,6 +93,9 @@ alias dnsmasq.start='sudo launchctl start homebrew.mxcl.dnsmasq'
 alias dnsmasq.stop='sudo launchctl stop homebrew.mxcl.dnsmasq'
 alias dnsmasq.restart='dnsmasq.stop && dnsmasq.start'
 
+# Make Sublime Text 3 the default editor
+EDITOR='subl/'
+
 # Map Vim to MacVim
 # alias vim="mvim"
 
