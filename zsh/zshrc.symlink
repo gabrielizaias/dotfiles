@@ -6,12 +6,12 @@ config_files=($DOTFILES/**/*.zsh)
 
 # Load the path files
 for file in ${(M)config_files:#*/path.zsh}; do
-    source $file
+	source $file
 done
 
 # Load everything but the path and completion files
 for file in ${config_files:#*/path.zsh}; do
-    source $file
+	source $file
 done
 
 unset config_files
@@ -105,37 +105,37 @@ EDITOR='subl/'
 
 # Create a new directory and enter it
 function mkd() {
-    mkdir -p "$@" && cd "$@"
+	mkdir -p "$@" && cd "$@"
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
 # opens the given location
 function s() {
-    if [ $# -eq 0 ]; then
-        subl .
-    else
-        subl "$@"
-    fi
+	if [ $# -eq 0 ]; then
+		subl .
+	else
+		subl "$@"
+	fi
 }
 
 # `a` with no arguments opens current directory in Atom, otherwise opens the
 # given location
 function a() {
-    if [ $# -eq 0 ]; then
-        atom .
-    else
-        atom "$@"
-    fi
+	if [ $# -eq 0 ]; then
+		atom .
+	else
+		atom "$@"
+	fi
 }
 
 # `o` with no arguments opens current directory, otherwise opens the given
 # location
 function o() {
-    if [ $# -eq 0 ]; then
-        open .
-    else
-        open "$@"
-    fi
+	if [ $# -eq 0 ]; then
+		open .
+	else
+		open "$@"
+	fi
 }
 
 

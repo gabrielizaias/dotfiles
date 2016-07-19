@@ -4,8 +4,8 @@
 source utils.sh
 
 if which git &> /dev/null; then
-    msg_success "Git already installed"
+	msg_success "Git already installed"
 else
-    msg_info "Installing Git (via Homebrew)"
-    brew install git
+	msg_info "Installing Git (via Homebrew)"
+	brew install git
 fi
