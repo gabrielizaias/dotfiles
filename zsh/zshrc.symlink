@@ -74,8 +74,8 @@ alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.ngi
 alias nginx.restart='nginx.stop && nginx.start'
 
 # Start, Stop and Restart php-fpm (Homebrew)
-alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
-alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
+alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist"
+alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist"
 alias php-fpm.restart='php-fpm.stop && php-fpm.start'
 
 # Start, Stop and Restart mysql (Homebrew)
