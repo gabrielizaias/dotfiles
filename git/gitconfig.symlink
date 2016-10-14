@@ -13,6 +13,8 @@
 	p = !"git pull; git fetch -p; git submodule foreach git pull origin master"
 	# Locally ignore changes to file(s)
 	bypass = update-index --assume-unchanged
+	# Locally un-ignore changes to file(s)
+	no-bypass = update-index --no-assume-unchanged
 	# Clone a repository including all submodules
 	c = clone --recursive
 	# Commit all changes
