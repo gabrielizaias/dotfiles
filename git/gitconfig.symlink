@@ -122,7 +122,7 @@
 	insteadOf = "gist:"
 
 [push]
-	default = current
+	default = upstream
 
 [user]
 	name = Gabriel Izaias
