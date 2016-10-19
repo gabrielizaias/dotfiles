@@ -122,8 +122,7 @@
 	insteadOf = "gist:"
 
 [push]
-	# Push the current branch to its upstream branch
-	default = upstream
+	default = current
 
 [user]
 	name = Gabriel Izaias
