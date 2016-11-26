@@ -152,8 +152,14 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bullet-train"
 
-BULLETTRAIN_DIR_BG=red
+BULLETTRAIN_DIR_BG=green
 BULLETTRAIN_DIR_FG=white
+BULLETTRAIN_GIT_BG=blue
+BULLETTRAIN_GIT_FG=white
+BULLETTRAIN_PROMPT_CHAR="❯"
+BULLETTRAIN_TIME_SHOW=false
+BULLETTRAIN_NVM_SHOW=true
+BULLETTRAIN_EXEC_TIME_SHOW=true
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
