@@ -144,3 +144,5 @@
 [diff]
 	# Enable improved diff algorithm (git 2.9)
 	compactionHeuristic = true
+[log]
+	date = iso
