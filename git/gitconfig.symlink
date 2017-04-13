@@ -1,3 +1,7 @@
+[user]
+	name = Gabriel Izaias
+	email = gabriel.izaias@gmail.com
+
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 30 commits
 	l = log --graph --pretty=format:'%Cgreen%h%Creset%C(yellow)%d%Creset %s %Cgreen%cn%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative
@@ -147,9 +151,6 @@
 	# Show all of the files underneath a new directory during a `git status`
 	showUntrackedFiles = all
 
-[user]
-	name = Gabriel Izaias
-	email = gabriel.izaias@gmail.com
 
 [filter "media"]
 	clean = git-media-clean %f
