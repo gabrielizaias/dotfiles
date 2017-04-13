@@ -1,12 +1,12 @@
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 30 commits
-	l = log --oneline --graph --decorate -n 30
+	l = log --graph --pretty=format:'%Cgreen%h%Creset%C(yellow)%d%Creset %s %Cgreen%cn%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative
 	# View the current working tree status using the short format
 	s = status -s
 	# View the current working tree status using the normal format
 	st = status
 	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 	# Pull in remote changes for the current repository and all its submodules
@@ -33,6 +33,14 @@
 	ck = checkout
 	# Delete branch if it was merged previously
 	bd = branch -d
+	# Delete any local branch which has been deleted from the remote
+	prune = fetch --prune
+	# Un-commit latest commit and add its changes to working tree
+	undo = reset --soft HEAD^
+	# When you stash, catch the new files you haven’t caught with a git add yet
+	sh = stash save --include-untracked
+	# Show the original commit being rebased
+	original = "!git show $(cat .git/rebase-apply/original-commit)"
 	# Show verbose output about tags, branches or remotes
 	t = tag -l
 	b = branch -a
@@ -69,6 +77,7 @@
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
 	editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
 	# Use colors in Git commands that are capable of colored output when
@@ -78,7 +87,7 @@
 [color "branch"]
 	current = yellow reverse
 	local = yellow
-	remote = green
+	remote = cyan
 
 [color "diff"]
 	commit = green
@@ -91,18 +100,26 @@
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+	newNormal = green
+	newHighlight = green 22
 
 [color "status"]
 	added = yellow
 	changed = green
 	untracked = cyan
 
+[rebase]
+	# Automatically stash and unstash the working directory before and after rebases
+	autostash = true
+
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 	tool = p4merge
+	# Get a third section, the original changes before ‘left’ and ‘right’ tried to change it
+	conflictstyle = diff3
+	# Get an error unless every merge is fast-forward
+	ff = only
 
 # URL shorthands
 [url "git@github.com:"]
@@ -123,6 +140,12 @@
 
 [push]
 	default = current
+	# Send local tags on `git push`
+	followTags = true
+
+[status]
+	# Show all of the files underneath a new directory during a `git status`
+	showUntrackedFiles = all
 
 [user]
 	name = Gabriel Izaias
@@ -144,5 +167,13 @@
 [diff]
 	# Enable improved diff algorithm (git 2.9)
 	compactionHeuristic = true
+	tool = icdiff
+
+[difftool]
+	prompt = false
+
+[difftool "icdiff"]
+	cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+
 [log]
 	date = iso
