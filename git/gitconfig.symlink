@@ -5,7 +5,8 @@
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 30 commits
 	l = log --pretty=format:'%Cgreen%h%Creset%C(auto)%d%Creset %s %C(cyan)%cn%Creset %C(yellow)%cr%Creset'
-	today = !git l --since yesterday --author $(git config user.email)
+	# Show what the current user has commited today
+	today = !git l --since yesterday --all --no-merges --author $(git config user.email)
 	# View the current working tree status using the short format
 	s = status -s
 	# View the current working tree status using the normal format
