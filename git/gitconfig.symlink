@@ -155,15 +155,15 @@
 	# Show all of the files underneath a new directory during a `git status`
 	showUntrackedFiles = all
 
-
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 
 [mergetool]
 	keepTemporaries = false
