@@ -124,6 +124,16 @@ function s() {
 	fi
 }
 
+# `vs` with no arguments opens the current directory in Visual Studio Code,
+# otherwise opens the given location
+function vs() {
+	if [ $# -eq 0 ]; then
+		code .
+	else
+		code "$@"
+	fi
+}
+
 # `a` with no arguments opens current directory in Atom, otherwise opens the
 # given location
 function a() {
