@@ -31,7 +31,6 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # File system navigation
-alias www="cd ~/www/"
 alias proj="cd ~/Projects/"
 
 # Empty the Trash on all mounted volumes and the main HDD
