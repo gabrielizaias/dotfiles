@@ -84,9 +84,9 @@ alias php:stop="sudo brew services stop php72"
 alias php:restart='sudo brew services restart php72'
 
 # Start, Stop and Restart mysql (Homebrew)
-alias mysql.start="sudo brew services start mysql"
-alias mysql.stop="sudo brew services stop mysql"
-alias mysql.restart='sudo brew services restart mysql'
+alias mysql:start="sudo brew services start mysql"
+alias mysql:stop="sudo brew services stop mysql"
+alias mysql:restart='sudo brew services restart mysql'
 
 # Show nginx error logs (Homebrew)
 alias nginx.logs.error='tail -250f /usr/local/etc/nginx/logs/error.log'
