@@ -94,9 +94,9 @@ alias nginx.logs.access='tail -250f /usr/local/etc/nginx/logs/access.log'
 alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.access.log'
 alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
 
-alias dnsmasq.start='sudo brew services start dnsmasq'
-alias dnsmasq.stop='sudo brew services stop dnsmasq'
-alias dnsmasq.restart='sudo brew services restart dnsmasq'
+alias dnsmasq:start='sudo brew services start dnsmasq'
+alias dnsmasq:stop='sudo brew services stop dnsmasq'
+alias dnsmasq:restart='sudo brew services restart dnsmasq'
 
 # Make VS Code the default editor
 EDITOR='code'
