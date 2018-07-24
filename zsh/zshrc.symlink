@@ -79,9 +79,9 @@ alias nginx:stop='sudo brew services stop nginx'
 alias nginx:restart='sudo brew services restart nginx'
 
 # Start, Stop and Restart php-fpm (Homebrew)
-alias php.start="sudo brew services start php72"
-alias php.stop="sudo brew services stop php72"
-alias php.restart='sudo brew services restart php72'
+alias php:start="sudo brew services start php72"
+alias php:stop="sudo brew services stop php72"
+alias php:restart='sudo brew services restart php72'
 
 # Start, Stop and Restart mysql (Homebrew)
 alias mysql.start="sudo brew services start mysql"
