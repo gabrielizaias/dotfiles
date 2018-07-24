@@ -69,9 +69,9 @@ alias freewifi="sudo ifconfig en0 ether `openssl rand -hex 6 | sed 's/\(..\)/\1:
 alias reload="exec $SHELL -l"
 
 # Start, Stop and Restart Apache (System's, not MAMP's Apache)
-alias astart="sudo apachectl -k start"
-alias astop="sudo apachectl -k stop"
-alias arestart="sudo apachectl -k restart"
+alias apache:start="sudo brew services start apache"
+alias apache:stop="sudo brew services start apache"
+alias apache:restart="sudo brew services start apache"
 
 # Start, Stop and Restart nginx (Homebrew)
 alias nginx.start='sudo brew services start nginx'
