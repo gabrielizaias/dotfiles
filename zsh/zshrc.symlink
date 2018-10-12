@@ -68,6 +68,9 @@ alias freewifi="sudo ifconfig en0 ether `openssl rand -hex 6 | sed 's/\(..\)/\1:
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+# Safely remove files (move them to the Trash instead of permanently deletion)
+alias rm='trash'
+
 # Start, Stop and Restart Apache (System's, not MAMP's Apache)
 alias apache:start="sudo brew services start apache"
 alias apache:stop="sudo brew services start apache"
