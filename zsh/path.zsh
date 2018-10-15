@@ -1,5 +1,5 @@
 # Add .rvm/bin to PATH
-PATH="$(brew --prefix php)/bin:$HOME/.composer/vendor/bin:/usr/local/opt/sqlite/bin:/usr/local/bin:/usr/local/sbin:~/bin:~/.rvm/bin:~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH"
+PATH="$(brew --prefix php)/bin:$HOME/.composer/vendor/bin:/usr/local/opt/sqlite/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.rvm/bin:$PATH"
 
 # Load nvm
 export NVM_DIR="$(brew --prefix nvm)"
