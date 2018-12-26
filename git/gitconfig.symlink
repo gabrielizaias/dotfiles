@@ -53,6 +53,8 @@
 	t = tag -l
 	b = branch -a
 	r = remote -v
+	# Open the browser to create a PR from the current branch. Assumes you use an https remote on GitHub
+	pr = !open `git config remote.origin.url`/compare/$(git rev-parse --abbrev-ref HEAD)
 	# Credit an author on the latest commit
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 	# Interactive rebase with the given number of latest commits
