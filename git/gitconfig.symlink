@@ -188,4 +188,4 @@
 	signinkey = A1E6DAC272CB61DE
 	program = gpg
 [commit]
-	gpgsign = true
+	gpgsign = false
