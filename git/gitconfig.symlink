@@ -51,7 +51,8 @@
 	original = "!git show $(cat .git/rebase-apply/original-commit)"
 	# Show verbose output about tags, branches or remotes
 	t = tag -l
-	b = branch -a
+	b = branch --sort=-committerdate --verbose --format='%(HEAD) %(color:red)%(objectname:short)%(color:reset) %(color:yellow)%(refname:short)%(color:reset) %(contents:subject) %(color:green)(%(committerdate:relative))%(color:reset) %(color:blue)<%(authorname)>%(color:reset)'
+	ba = b -a
 	r = remote -v
 	# Open the browser to create a PR from the current branch. Assumes you use an https remote on GitHub
 	pr = !open `git config remote.origin.url`/compare/$(git rev-parse --abbrev-ref HEAD)
