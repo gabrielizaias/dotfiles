@@ -6,5 +6,5 @@ function gitexport() {
 
 # generate .gitignore automatically using gitignore.io
 function gi() {
-	curl -s https://www.gitignore.io/api/"$@" ;
+	curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/"$@" ;
 }
