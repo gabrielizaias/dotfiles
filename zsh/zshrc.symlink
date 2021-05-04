@@ -39,7 +39,7 @@ alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and
 # their installed packages
-alias update='emptytrash; sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; composer self-update; npm i -g npm; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup;'
+alias update='emptytrash; sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; composer self-update; npm i -g npm; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; rustup update;'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -251,9 +251,6 @@ prompt pure
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # tabtab source for packages
 # uninstall by removing these lines
